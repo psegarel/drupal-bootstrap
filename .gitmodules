@@ -1,0 +1,3 @@
+[submodule "sites/all/themes/frameboot"]
+	path = sites/all/themes/frameboot
+	url = https://github.com/psegarel/frameboot.git
