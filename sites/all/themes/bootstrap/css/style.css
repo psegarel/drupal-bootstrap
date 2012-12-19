@@ -1,0 +1,14 @@
+/*________________________ Minimal styling, can be removed if necessary ________________________*/
+
+section#header-section,
+section#content-section,
+section#footer-section													{	margin-top: 20px;
+																		}
+																		
+section#footer-section													{	background: #eee;
+																			padding: 4em 0;
+																		}
+
+.copyright																{	font-family: 'Century Gothic' , sans-serif;
+																		}																		
+/*________________________________________________________________________________________________*/																		
