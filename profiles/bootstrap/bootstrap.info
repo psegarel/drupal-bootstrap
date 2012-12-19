@@ -6,10 +6,9 @@ core = 7.x
 ; -----------------------------------------------------------------------------
 ;                                  Theme
 ; -----------------------------------------------------------------------------
-; Sets Bootstrap as the default theme, note that this is not the official
-; Drupal Bootstrap project found at http://drupal.org/project/bootstrap.
+; Sets Frameboot as the default theme.
 ; 
-; This version is a minimal implementation of the Bootstrap framework, that
+; This theme is a minimal implementation of the Bootstrap framework, that
 ; should be overridden with a subtheme and just aims to add the minimum 
 ; requirements for Bootstrap.
 ;
@@ -19,7 +18,7 @@ core = 7.x
 ; Check that the bootstrap folder within the bootstrap theme uses the latest 
 ; version!
 ; -----------------------------------------------------------------------------
-theme = bootstrap
+theme = frameboot
 
 
 ; -----------------------------------------------------------------------------

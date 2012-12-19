@@ -1,15 +1,13 @@
-name = Boostrap
-description = Boostrap is a subtheme of the Framework drupal theme, implementing Twitter Boostrap framework.
+name = Frameboot
+description = Frameboot is a blank canvas for theme developers, it is based on the Framework theme and the Bootstrap library and should be used as a starting point to facilitate your theme development.
 core = 7.x
 engine = phptemplate
-
-base theme = framework
 
 stylesheets[all][] = bootstrap/css/bootstrap.min.css
 stylesheets[all][] = bootstrap/css/bootstrap-responsive.min.css
 stylesheets[all][] = css/style.css
 
-scripts[] = bootstrap/js/bootstrap.min.js
+scripts[] = bootstrap/css/bootstrap.min.js
 
 regions[header]         = Header
 regions[navigation]     = Navigation
