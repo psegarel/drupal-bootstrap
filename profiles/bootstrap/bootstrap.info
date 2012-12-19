@@ -3,6 +3,33 @@ description = Install with commonly used features pre-configured
 version = VERSION
 core = 7.x
 
+; -----------------------------------------------------------------------------
+;                                  Theme
+; -----------------------------------------------------------------------------
+; Sets Bootstrap as the default theme, note that this is not the official
+; Drupal Bootstrap project found at http://drupal.org/project/bootstrap.
+; 
+; This version is a minimal implementation of the Bootstrap framework, that
+; should be overridden with a subtheme and just aims to add the minimum 
+; requirements for Bootstrap.
+;
+; Adding JQuery is handled by JQuery Update, which should be configured after 
+; the profile installation.
+;
+; Check that the bootstrap folder within the bootstrap theme uses the latest 
+; version!
+; -----------------------------------------------------------------------------
+theme = bootstrap
+
+
+; -----------------------------------------------------------------------------
+;                                  Modules
+; -----------------------------------------------------------------------------
+; List the modules (core, contrib and/or features) to be enabled in the
+; dependencies[] array. Any dependencies of the listed modules will be detected
+; and enabled automatically.
+; -----------------------------------------------------------------------------
+
 ; Core
 dependencies[] = block
 dependencies[] = color
