@@ -7,7 +7,7 @@ stylesheets[all][] = bootstrap/css/bootstrap.min.css
 stylesheets[all][] = bootstrap/css/bootstrap-responsive.min.css
 stylesheets[all][] = css/style.css
 
-scripts[] = bootstrap/css/bootstrap.min.js
+scripts[] = bootstrap/js/bootstrap.min.js
 
 regions[header]         = Header
 regions[navigation]     = Navigation
