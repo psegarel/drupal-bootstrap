@@ -26,6 +26,17 @@ dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
 
+; Chaos Tool Suite
+dependencies[] = ctools
+
 ; User Interface
 dependencies[] = jquery_update
+
+; Other
+dependencies[] = custompage
+dependencies[] = custompage_ui
+
+; Views
+dependencies[] = views
+dependencies[] = views_ui
 

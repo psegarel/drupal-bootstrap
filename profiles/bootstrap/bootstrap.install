@@ -435,4 +435,13 @@ function bootstrap_install() {
     ->execute();
   variable_set('admin_theme', 'rubik');
   variable_set('node_admin_theme', '1');
+
+  // Enable the default Boostrap theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'bootstrap')
+    ->execute();
+  variable_set('default_theme', 'bootstrap');
+  //variable_set('node_admin_theme', '1');
 }
