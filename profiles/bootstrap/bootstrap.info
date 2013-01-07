@@ -12,8 +12,9 @@ core = 7.x
 ; should be overridden with a subtheme and just aims to add the minimum 
 ; requirements for Bootstrap.
 ;
-; Adding JQuery is handled by JQuery Update, which should be configured after 
-; the profile installation.
+; Adding JQuery is handled by JQuery Multi, which should be configured after 
+; the profile installation. At the moment, it's not possible to enable jQuery Multi
+; with this profile, this should be done manually.
 ;
 ; Check that the bootstrap folder within the bootstrap theme uses the latest 
 ; version!
@@ -56,7 +57,7 @@ dependencies[] = ctools
 ; Other
 dependencies[] = custompage
 dependencies[] = custompage_ui
-dependencies[] = jquery_multi
+;dependencies[] = jqmulti
 dependencies[] = libraries
 
 ; Views
