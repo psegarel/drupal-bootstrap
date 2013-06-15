@@ -1,0 +1,49 @@
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteBase /sites/default/files/advagg_css
+
+  # Send 404's back to index.php
+  RewriteCond %{REQUEST_FILENAME} !-s
+  RewriteRule ^(.*)$ /index.php?q=sites/default/files/advagg_css/$1 [L]
+
+  # Rules to correctly serve gzip compressed css files.
+  # Requires both mod_rewrite and mod_headers to be enabled.
+  <IfModule mod_headers.c>
+    # Serve gzip compressed css files if they exist and client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.css$ $1\.css\.gz [QSA]
+
+    # Serve correct content types, and prevent mod_deflate double gzip.
+    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1]
+
+    <FilesMatch "\.css\.gz$">
+      # Serve correct encoding type.
+      Header set Content-Encoding gzip
+      # Force proxies to cache gzipped & non-gzipped css files separately.
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+  </IfModule>
+</IfModule>
+
+<FilesMatch "^css_[0-9a-f]{32}_.+\.css(\.gz)?">
+  <IfModule mod_expires.c>
+    # Enable expirations.
+    ExpiresActive On
+
+    # Cache all aggregated css files for 1 year after access (A).
+    ExpiresDefault A31556926
+  </IfModule>
+  <IfModule mod_headers.c>
+    # Unset unnecessary headers.
+    Header unset Last-Modified
+    Header unset Pragma
+    Header unset Accept-Ranges
+
+    # Make these files publicly cacheable.
+    Header append Cache-Control "public"
+  </IfModule>
+  FileETag MTime Size
+</FilesMatch>
+

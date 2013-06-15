@@ -1,0 +1,16 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+/* line 5, ../sass/global.scss */
+html, body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #121212;
+  color: #eee;
+}
+
+/* line 11, ../sass/global.scss */
+#block-views-construction-block .view-content .views-field-title {
+  font-size: 4em;
+  padding-top: 30%;
+  font-weight: bold;
+  letter-spacing: -.05em;
+}

@@ -51,6 +51,11 @@ dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
 
+; Development
+dependencies[] = migrate
+dependencies[] = migrate_ui
+dependencies[] = migrate_d2d
+
 ; Chaos Tool Suite
 dependencies[] = ctools
 
